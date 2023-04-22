@@ -1,6 +1,7 @@
 import React from 'react'
 import Search from '../components/Search'
 import Filter from '../components/Filter'
+import { app, database } from '../firebaseConfig'
 
 const JobLists = () => {
   return (
