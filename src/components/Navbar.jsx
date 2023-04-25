@@ -5,7 +5,7 @@ const Navbar = () => {
   const [showMenu, setShowMenu] = useState(false)
 
   return (
-    <header className='fixed top-0 z-50 w-full bg-blue-600'>
+    <header className='fixed top-0 z-50 w-full bg-blue-600 shadow-sm'>
       <nav className='container mx-auto flex flex-col px-4 py-2 md:flex-row md:items-center md:justify-between'>
         <div className='flex flex-col md:items-center md:flex-row md:gap-4'>
           <div className='flex justify-between items-center'>

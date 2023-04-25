@@ -5,7 +5,7 @@ import JobCard from '../components/JobCard'
 import { GlobalContext } from '../context/GlobalContext'
 
 const JobLists = () => {
-  const {jobs, fetchStatus} = useContext(GlobalContext)
+  const { jobs, fetchStatus } = useContext(GlobalContext)
 
   return (
     <section className='container mx-auto my-12 px-6 md:p-0'>
@@ -18,14 +18,10 @@ const JobLists = () => {
         <Filter />
         <Filter />
       </div>
-      <div>
-        {jobs.map((job, id) => (
-          <JobCard key={id} job={job} />
-          // <div key={id}>
-          //   <h1>{job.title}</h1>
-          //   <img src={job.company_image_url} alt="" width='32px' />
-          // </div>
-        ))}
+      <div className='grid gap-4 md:grid-cols-2 lg:grid-cols-3'>
+        {jobs !== null &&
+          fetchStatus !== true &&
+          jobs.map((job, id) => <JobCard key={id} job={job} />)}
       </div>
     </section>
   )

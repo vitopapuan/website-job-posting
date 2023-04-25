@@ -11,21 +11,24 @@ export const GlobalProvider = (props) => {
   const [fetchStatus, setFetchStatus] = useState(true)
 
   useEffect(() => {
-    const getData = async () => {
-      try {
-        const data = await getDocs(jobsCollectionRef)
-        const jobsData = data.docs.map((doc) => ({ ...doc.data(), id: doc.id }))
-        setJobs(jobsData)
-      } catch (err) {
-        console.error(err)
+    setTimeout(() => {
+      const getData = async () => {
+        try {
+          const data = await getDocs(jobsCollectionRef)
+          const jobsData = data.docs.map((doc) => ({
+            ...doc.data(),
+            id: doc.id,
+          }))
+          setJobs(jobsData)
+        } catch (err) {
+          console.error(err)
+        }
       }
-    }
 
-    getData()
-    setFetchStatus(false)
+      getData()
+      setFetchStatus(false)
+    }, 250)
   }, [fetchStatus, setFetchStatus])
-
-  console.log(jobs)
 
   return (
     <GlobalContext.Provider
