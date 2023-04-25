@@ -5,7 +5,7 @@ import { collection, getDocs } from 'firebase/firestore'
 export const GlobalContext = createContext()
 
 export const GlobalProvider = (props) => {
-  const [jobs, setJobs] = useState([])
+  const [jobs, setJobs] = useState(null)
   const jobsCollectionRef = collection(database, 'jobs')
 
   const [fetchStatus, setFetchStatus] = useState(true)
@@ -25,8 +25,8 @@ export const GlobalProvider = (props) => {
         }
       }
 
-      getData()
       setFetchStatus(false)
+      getData()
     }, 250)
   }, [fetchStatus, setFetchStatus])
 
