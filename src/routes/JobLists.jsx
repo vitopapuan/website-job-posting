@@ -1,9 +1,9 @@
-import React, { useContext, useEffect, useState } from 'react'
+import React, { useContext } from 'react'
+import { GlobalContext } from '../context/GlobalContext'
 import Search from '../components/Search'
 import Filter from '../components/Filter'
 import JobCard from '../components/JobCard'
 import JobCardSkeleton from '../skeleton/JobCardSkeleton'
-import { GlobalContext } from '../context/GlobalContext'
 
 const JobLists = () => {
   const { jobs, fetchStatus } = useContext(GlobalContext)
@@ -14,7 +14,7 @@ const JobLists = () => {
   }
 
   return (
-    <section className='container mx-auto my-12 px-6 md:p-0'>
+    <section className='container mx-auto my-12 px-6 md:p-0 first-of-type:mt-24'>
       <h1 className='text-3xl text-blue-600 font-bold text-center my-4'>
         Current Job Lists
       </h1>

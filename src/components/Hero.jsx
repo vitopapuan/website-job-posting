@@ -10,7 +10,7 @@ const Hero = () => {
           <HiBriefcase /> Job Portal
         </h2>
         <h1 className='text-6xl font-bold text-center text-slate-800 sm:text-8xl xl:text-start'>
-          Go chase your <span className='text-blue-600'>dream</span>
+          Go chase your <span className='text-blue-600'>dream job</span>
         </h1>
         <p className='max-w-2xl text-lg font-medium text-center text-slate-800 xl:text-justify'>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel fuga quos

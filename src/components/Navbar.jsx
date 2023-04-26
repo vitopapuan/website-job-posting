@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import { HiBriefcase, HiMenu, HiOutlineLogin } from 'react-icons/hi'
+import { Link } from 'react-router-dom'
 
 const Navbar = () => {
   const [showMenu, setShowMenu] = useState(false)
@@ -9,11 +10,11 @@ const Navbar = () => {
       <nav className='container mx-auto flex flex-col px-4 py-2 md:flex-row md:items-center md:justify-between'>
         <div className='flex flex-col md:items-center md:flex-row md:gap-4'>
           <div className='flex justify-between items-center'>
-            <a
-              href='#'
+            <Link
+              to='/'
               className='flex items-center gap-2 p-2 text-white text-2xl font-semibold'>
               <HiBriefcase /> Job Portal
-            </a>
+            </Link>
             <button
               className='text-white text-2xl p-2 rounded-lg hover:bg-blue-800 md:hidden'
               onClick={() => setShowMenu(!showMenu)}>
@@ -22,33 +23,33 @@ const Navbar = () => {
           </div>
         </div>
         <div className={`${showMenu ? 'flex flex-col' : 'hidden'} md:flex md:flex-row md:gap-4`}>
-          <a
-            href='#'
-            className='px-3 py-2 text-white rounded-lg hover:bg-blue-800'>
+          <Link
+            to='/'
+            className='px-3 py-2 text-white text-lg rounded-lg hover:bg-blue-800'>
             Home
-          </a>
-          <a
-            href='#'
-            className='px-3 py-2 text-white rounded-lg hover:bg-blue-800'>
+          </Link>
+          <Link
+            to='/job-lists'
+            className='px-3 py-2 text-white text-lg rounded-lg hover:bg-blue-800'>
             Job Lists
-          </a>
-          <a
-            href='#'
-            className='px-3 py-2 text-white rounded-lg hover:bg-blue-800'>
+          </Link>
+          <Link
+            to='#'
+            className='px-3 py-2 text-white text-lg rounded-lg hover:bg-blue-800'>
             About
-          </a>
+          </Link>
         </div>
         <div className={`${showMenu ? 'flex flex-col' : 'hidden'} md:flex md:flex-row md:gap-4`}>
-          <a
-            href='#'
-            className='px-3 py-2 text-white rounded-lg hover:bg-blue-800'>
+          <Link
+            to='#'
+            className='px-3 py-2 text-white text-lg rounded-lg hover:bg-blue-800'>
             Sign Up
-          </a>
-          <a
-            href='#'
-            className='flex items-center gap-2 px-3 py-2 text-white rounded-lg hover:bg-blue-800'>
+          </Link>
+          <Link
+            to='#'
+            className='flex items-center gap-2 px-3 py-2 text-white text-lg rounded-lg hover:bg-blue-800'>
             Log In <HiOutlineLogin />
-          </a>
+          </Link>
         </div>
       </nav>
     </header>

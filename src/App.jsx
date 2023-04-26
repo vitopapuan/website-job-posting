@@ -1,17 +1,29 @@
-import { useState } from 'react'
-import Navbar from './components/Navbar'
-import Hero from './components/Hero'
+import { useContext } from 'react'
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
+import { GlobalContext } from './context/GlobalContext'
+import HomePage from './routes/HomePage'
 import JobLists from './routes/JobLists'
-import { GlobalProvider } from './context/GlobalContext'
+import JobDetail from './routes/JobDetail'
+import DefaultLayout from './layout/DefaultLayout'
 
-function App() {
+const App = () => {
 
   return (
-    <GlobalProvider>
-      <Navbar />
-      <Hero />
-      <JobLists />
-    </GlobalProvider>
+    <Router>
+      <DefaultLayout>
+        <Routes>
+          <Route path='/' element={<HomePage />} />
+          <Route
+            path='/job-lists'
+            element={<JobLists />}
+          />
+          <Route
+            path='/job-lists/:id'
+            element={<JobDetail />}
+          />
+        </Routes>
+      </DefaultLayout>
+    </Router>
   )
 }
 

@@ -1,10 +1,10 @@
 import React from 'react'
-import Button from './Button'
+import { Link } from 'react-router-dom'
 import { FaMapMarkerAlt, FaDollarSign, FaHourglassHalf } from 'react-icons/fa'
 
 const JobCard = ({ job }) => {
   return (
-    <a href='#'>
+    <Link to={`/job-lists/${job.id}`}>
       <div className='p-6 border border-blue-400 shadow-sm rounded-lg'>
         <div className='flex items-center gap-4'>
           <img
@@ -37,7 +37,7 @@ const JobCard = ({ job }) => {
           </div>
         </div>
       </div>
-    </a>
+    </Link>
   )
 }
 
