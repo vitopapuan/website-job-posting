@@ -8,6 +8,11 @@ import { GlobalContext } from '../context/GlobalContext'
 const JobLists = () => {
   const { jobs, fetchStatus } = useContext(GlobalContext)
 
+  const jobCardSkeleton = []
+  for (let i = 0; i < 3; i++) {
+    jobCardSkeleton.push(<JobCardSkeleton key={i} />)
+  }
+
   return (
     <section className='container mx-auto my-12 px-6 md:p-0'>
       <h1 className='text-3xl text-blue-600 font-bold text-center my-4'>
@@ -25,11 +30,9 @@ const JobLists = () => {
         <div className='h-7 w-64 my-4 rounded bg-gray-200 animate-pulse'></div>
       )}
       <div className='grid gap-4 md:grid-cols-2 lg:grid-cols-3'>
-        {jobs !== null && fetchStatus !== true ? (
-          jobs.map((job, id) => <JobCard key={id} job={job} />)
-        ) : (
-          <JobCardSkeleton />
-        )}
+        {jobs !== null && fetchStatus !== true
+          ? jobs.map((job, id) => <JobCard key={id} job={job} />)
+          : jobCardSkeleton}
       </div>
     </section>
   )
