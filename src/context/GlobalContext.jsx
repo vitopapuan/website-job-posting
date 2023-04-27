@@ -27,8 +27,10 @@ export const GlobalProvider = (props) => {
 
       setFetchStatus(false)
       getData()
-    }, 250)
+    }, 1000)
   }, [fetchStatus, setFetchStatus])
+
+  console.log(jobs)
 
   return (
     <GlobalContext.Provider

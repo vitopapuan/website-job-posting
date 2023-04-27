@@ -1,12 +1,16 @@
 import React from 'react'
 
-const Filter = () => {
+const Filter = ({ text, searchParam, setFilterParam }) => {
   return (
-    <select name='filterCity' defaultValue='none' className='block px-3 py-2 text-gray-700 bg-white border border-slate-400 rounded-lg shadow-sm'>
-      <option value='none'>Select City</option>
-      <option value='Jakarta'>Jakarta</option>
-      <option value='Surabaya'>Surabaya</option>
-      <option value='Makassar'>Makassar</option>
+    <select
+      name='filterParam'
+      defaultValue='none'
+      onChange={(e) => setFilterParam(e.target.value)}
+      className='block px-3 py-2 text-gray-700 bg-white border border-slate-400 rounded-lg shadow-sm'>
+      <option value='none'>{text}</option>
+      {searchParam.map((param, id) => (
+        <option key={id} value={param}>{param}</option>
+      ))}
     </select>
   )
 }

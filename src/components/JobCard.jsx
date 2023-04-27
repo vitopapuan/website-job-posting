@@ -10,7 +10,7 @@ const JobCard = ({ job }) => {
           <img
             src={job.company_image_url}
             alt={job.company_name}
-            className='h-12 w-12 object-cover rounded'
+            className='w-12 h-12 object-cover rounded'
           />
           <div className='overflow-hidden'>
             <h1 className='font-medium text-xl text-slate-800 truncate'>
