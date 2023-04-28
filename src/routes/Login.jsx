@@ -62,7 +62,7 @@ const LogIn = () => {
           <p className='mt-10 text-center text-sm text-gray-500'>
             Not a member?{' '}
             <Link
-              to='/signup'
+              to='/website-job-posting/signup'
               className='font-semibold leading-6 text-blue-600 hover:text-blue-500'>
               Sign up today!
             </Link>

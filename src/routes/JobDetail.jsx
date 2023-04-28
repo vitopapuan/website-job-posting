@@ -44,7 +44,7 @@ const JobDetail = () => {
   return (
     <section className='container mx-auto mt-24 px-8 lg:max-w-screen-lg'>
       <div className='inline-block'>
-        <Link to='/' className='flex items-center gap-2 text-blue-600 mb-8'>
+        <Link to='/website-job-posting/' className='flex items-center gap-2 text-blue-600 mb-8'>
           <FaChevronLeft />
           <span className='text-xl'>Back</span>
         </Link>

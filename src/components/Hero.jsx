@@ -20,7 +20,7 @@ const Hero = () => {
       </div>
       <div
         className='hidden w-1/2 bg-cover bg-center rounded-xl mr-8 xl:block'
-        style={{ backgroundImage: 'url(/images/hero.jpg)' }}></div>
+        style={{ backgroundImage: 'url(./images/hero.JPG)' }}></div>
     </section>
   )
 }

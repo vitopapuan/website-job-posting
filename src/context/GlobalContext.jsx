@@ -30,8 +30,6 @@ export const GlobalProvider = (props) => {
     }, 1000)
   }, [fetchStatus, setFetchStatus])
 
-  console.log(jobs)
-
   return (
     <GlobalContext.Provider
       value={{ jobs, setJobs, fetchStatus, setFetchStatus }}>

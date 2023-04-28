@@ -14,21 +14,21 @@ const App = () => {
     <Router>
       <DefaultLayout>
         <Routes>
-          <Route path='/' element={<HomePage />} />
+          <Route path='/website-job-posting/' element={<HomePage />} />
           <Route
-            path='/job-lists'
+            path='/website-job-posting/job-lists'
             element={<JobLists />}
           />
           <Route
-            path='/job-lists/:id'
+            path='/website-job-posting/job-lists/:id'
             element={<JobDetail />}
           />
           <Route
-            path='/login'
+            path='/website-job-posting/login'
             element={<LogIn />}
           />
           <Route
-            path='/signup'
+            path='/website-job-posting/signup'
             element={<SignUp />}
           />
         </Routes>

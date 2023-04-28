@@ -4,7 +4,7 @@ import { FaMapMarkerAlt, FaDollarSign, FaHourglassHalf } from 'react-icons/fa'
 
 const JobCard = ({ job }) => {
   return (
-    <Link to={`/job-lists/${job.id}`}>
+    <Link to={`/website-job-posting/job-lists/${job.id}`}>
       <div className='p-6 border border-blue-400 shadow-sm rounded-lg'>
         <div className='flex items-center gap-4'>
           <img
