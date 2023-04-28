@@ -5,6 +5,8 @@ import HomePage from './routes/HomePage'
 import JobLists from './routes/JobLists'
 import JobDetail from './routes/JobDetail'
 import DefaultLayout from './layout/DefaultLayout'
+import LogIn from './routes/LogIn'
+import SignUp from './routes/SignUp'
 
 const App = () => {
 
@@ -20,6 +22,14 @@ const App = () => {
           <Route
             path='/job-lists/:id'
             element={<JobDetail />}
+          />
+          <Route
+            path='/login'
+            element={<LogIn />}
+          />
+          <Route
+            path='/signup'
+            element={<SignUp />}
           />
         </Routes>
       </DefaultLayout>

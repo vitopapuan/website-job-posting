@@ -41,12 +41,12 @@ const Navbar = () => {
         </div>
         <div className={`${showMenu ? 'flex flex-col' : 'hidden'} md:flex md:flex-row md:gap-4`}>
           <Link
-            to='#'
+            to='/signup'
             className='px-3 py-2 text-white text-lg rounded-lg hover:bg-blue-800'>
             Sign Up
           </Link>
           <Link
-            to='#'
+            to='/login'
             className='flex items-center gap-2 px-3 py-2 text-white text-lg rounded-lg hover:bg-blue-800'>
             Log In <HiOutlineLogin />
           </Link>

@@ -109,7 +109,9 @@ const JobLists = () => {
         />
       </div>
       {jobs !== null && fetchStatus !== true ? (
-        <h2 className='text-xl my-4'>{handleFilter(jobs).length} Available Job Results</h2>
+        <h2 className='text-xl my-4'>
+          {handleFilter(jobs).length} Available Job Results
+        </h2>
       ) : (
         <div className='h-7 w-64 my-4 rounded bg-gray-200 animate-pulse'></div>
       )}
