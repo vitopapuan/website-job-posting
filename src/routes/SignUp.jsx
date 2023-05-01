@@ -1,10 +1,15 @@
 import React, { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
+import { auth } from '../../config/firebaseConfig'
+import { createUserWithEmailAndPassword } from 'firebase/auth'
 import { FaBriefcase } from 'react-icons/fa'
 import Loading from '../components/Loading'
 
 const SignUp = () => {
   const [isLoading, setIsLoading] = useState(false)
+
+  const [email, setEmail] = useState('')
+  const [password, setPassword] = useState('')
 
   useEffect(() => {
     setIsLoading(true)
@@ -12,6 +17,15 @@ const SignUp = () => {
       setIsLoading(false)
     }, 500)
   }, [])
+
+  const signUp = async () => {
+    try {
+      await createUserWithEmailAndPassword(auth, email, password)
+    } catch (err) {
+      console.error(err)
+    }
+  }
+
   return (
     <div className='flex h-screen max-w-lg flex-1 flex-col justify-center mx-auto px-6'>
       {isLoading ? (
@@ -40,6 +54,7 @@ const SignUp = () => {
                     type='email'
                     autoComplete='email'
                     required
+                    onChange={(e) => setEmail(e.target.value)}
                     className='block w-full rounded-md border-0 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-blue-600 sm:text-sm sm:leading-6'
                   />
                 </div>
@@ -57,11 +72,12 @@ const SignUp = () => {
                     type='password'
                     autoComplete='current-password'
                     required
+                    onChange={(e) => setPassword(e.target.value)}
                     className='block w-full rounded-md border-0 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-blue-600 sm:text-sm sm:leading-6'
                   />
                 </div>
               </div>
-              <div>
+              {/* <div>
                 <label
                   htmlFor='password'
                   className='block text-sm font-medium leading-6 text-gray-900'>
@@ -77,11 +93,12 @@ const SignUp = () => {
                     className='block w-full rounded-md border-0 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-blue-600 sm:text-sm sm:leading-6'
                   />
                 </div>
-              </div>
+              </div> */}
 
               <div>
                 <button
                   type='submit'
+                  onClick={signUp}
                   className='flex w-full justify-center rounded-md bg-blue-600 p-2 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-blue-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600'>
                   Sign up
                 </button>
