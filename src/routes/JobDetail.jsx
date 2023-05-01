@@ -56,9 +56,9 @@ const JobDetail = () => {
         fetchStatus !== true &&
         jobs
           .filter((job) => job.id === id)
-          .map((job) => (
+          .map((job, id) => (
             <>
-              <div key={job.id}>
+              <div key={id}>
                 <hr />
                 <div className='flex gap-4 mt-6'>
                   <div>

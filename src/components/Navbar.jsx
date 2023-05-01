@@ -24,7 +24,7 @@ const Navbar = () => {
         </div>
         <div className={`${showMenu ? 'flex flex-col' : 'hidden'} md:flex md:flex-row md:gap-4`}>
           <Link
-            to='/website-job-posting'
+            to='/website-job-posting/'
             className='px-3 py-2 text-white text-lg rounded-lg hover:bg-blue-800'>
             Home
           </Link>

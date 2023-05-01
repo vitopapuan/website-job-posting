@@ -1,4 +1,4 @@
-import React, { useContext, useState } from 'react'
+import React, { useContext, useState, useEffect } from 'react'
 import { GlobalContext } from '../context/GlobalContext'
 import Search from '../components/Search'
 import Filter from '../components/Filter'
