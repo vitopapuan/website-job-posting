@@ -1,5 +1,4 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
 import { HiBriefcase } from 'react-icons/hi'
 import Button from './Button'
 
@@ -22,9 +21,7 @@ const Hero = ({ isLoading }) => {
               quos quod deserunt assumenda sunt itaque esse veniam impedit
               facilis!
             </p>
-            <Link to='/website-job-posting/job-lists' className='py-3'>
-              <Button text={'Get Started'} />
-            </Link>
+            <Button link={'/website-job-posting/job-lists'} text={'Get Started'} />
           </div>
           <div
             className='hidden w-1/2 bg-cover bg-center rounded-xl mr-8 xl:block'
