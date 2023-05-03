@@ -6,7 +6,7 @@ const Hero = ({ isLoading }) => {
   return (
     <section className='container flex mb-12 mt-28 mx-auto gap-10'>
       {isLoading ? (
-        <div className='w-full h-[592px] bg-slate-200 rounded-lg animate-pulse'></div>
+        <div className='w-full h-[380px] m-8 bg-slate-200 rounded-lg animate-pulse sm:h-[556px] md:h-[432px] xl:h-[620px] xl:m-0 2xl:h-[592px]'></div>
       ) : (
         <>
           <div className='w-full flex flex-col justify-center items-center gap-8 p-8 xl:items-start xl:w-1/2'>

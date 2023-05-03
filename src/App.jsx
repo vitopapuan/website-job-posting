@@ -1,6 +1,4 @@
-import { useContext } from 'react'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
-import { GlobalContext } from './context/GlobalContext'
 import HomePage from './routes/HomePage'
 import JobLists from './routes/JobLists'
 import JobDetail from './routes/JobDetail'

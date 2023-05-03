@@ -1,5 +1,5 @@
 import { useState, useEffect, createContext } from 'react'
-import { database } from '../../config/firebaseConfig'
+import { database } from '../config/firebaseConfig'
 import { collection, getDocs } from 'firebase/firestore'
 
 export const GlobalContext = createContext()
