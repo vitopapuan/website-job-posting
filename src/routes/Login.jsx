@@ -40,6 +40,17 @@ const LogIn = () => {
             <h2 className='mt-10 text-center text-2xl font-bold leading-9 tracking-tight text-slate-800'>
               Log in to your account
             </h2>
+            <div className='my-10 p-4 border border-blue-600 rounded bg-blue-50 shadow-sm'>
+              <p className='text-justify text-sm font-medium tracking-tight text-slate-800'>
+                You can also login with this credential for testing:
+              </p>
+              <p className='mt-2 text-justify text-sm font-medium tracking-tight text-slate-800'>
+                Email : <span className='font-semibold'>text.email@email.com</span>
+              </p>
+              <p className='text-justify text-sm font-medium tracking-tight text-slate-800'>
+                Password : <span className='font-semibold'>test123</span>
+              </p>
+            </div>
           </div>
 
           <div className='mt-10 sm:mx-auto sm:w-full sm:max-w-sm'>
@@ -69,7 +80,9 @@ const LogIn = () => {
                     Password
                   </label>
                   <Link to='/website-job-posting/reset-password'>
-                  <p className='block text-sm font-semibold leading-6 text-blue-600'>Forgot password?</p>
+                    <p className='block text-sm font-semibold leading-6 text-blue-600'>
+                      Forgot password?
+                    </p>
                   </Link>
                 </div>
                 <div className='mt-2'>
