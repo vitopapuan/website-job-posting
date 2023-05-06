@@ -6,7 +6,7 @@ const DefaultLayout = (props) => {
   return (
     <>
       <Navbar />
-      {props.children}
+      <div className='min-h-screen'>{props.children}</div>
       <Footer />
     </>
   )

@@ -5,6 +5,7 @@ import JobDetail from './routes/JobDetail'
 import DefaultLayout from './layout/DefaultLayout'
 import LogIn from './routes/Login'
 import SignUp from './routes/SignUp'
+import ResetPassword from './routes/ResetPassword'
 
 const App = () => {
   return (
@@ -19,6 +20,7 @@ const App = () => {
           />
           <Route path='/website-job-posting/login' element={<LogIn />} />
           <Route path='/website-job-posting/signup' element={<SignUp />} />
+          <Route path='/website-job-posting/reset-password' element={<ResetPassword />} />
         </Routes>
       </DefaultLayout>
     </Router>

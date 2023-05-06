@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { onAuthStateChanged, signOut } from 'firebase/auth'
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 import {
   HiBriefcase,
   HiMenu,
@@ -14,6 +14,8 @@ const Navbar = () => {
 
   const [user, setUser] = useState({})
 
+  const navigate = useNavigate()
+
   useState(() => {
     onAuthStateChanged(auth, (currentUser) => {
       setUser(currentUser)
@@ -22,6 +24,7 @@ const Navbar = () => {
 
   const logout = async () => {
     await signOut(auth)
+    navigate('/website-job-posting/login')
   }
 
   return (
