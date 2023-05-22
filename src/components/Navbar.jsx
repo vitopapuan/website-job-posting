@@ -58,11 +58,12 @@ const Navbar = () => {
             className='px-3 py-2 text-white text-lg rounded-lg hover:bg-blue-800'>
             Job Lists
           </Link>
-          <Link
-            to='#'
+          <a
+            href='https://www.linkedin.com/in/vito-papuan/'
+            target='_blank'
             className='px-3 py-2 text-white text-lg rounded-lg hover:bg-blue-800'>
             About
-          </Link>
+          </a>
         </div>
         <div
           className={`${
